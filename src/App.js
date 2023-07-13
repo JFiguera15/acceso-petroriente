@@ -4,8 +4,6 @@ import jwt_decode from "jwt-decode";
 import swal from "sweetalert";
 import toast, { Toaster } from "react-hot-toast";
 
-
-
 export default function App() {
   const [nombre, setNombre] = useState("");
   const [user, setUser] = useState({});
@@ -13,6 +11,7 @@ export default function App() {
   const [disabled, setDisabled] = useState(false);
   const [continuar, setContinuar] = useState(true);
   const [respuesta, setRespuesta] = useState({});
+  
   const dominios = [
     "SINOENERGYCORP",
     "INTEGRA-WS",
@@ -130,25 +129,6 @@ export default function App() {
               type="text"
               required
               value={nombre}
-            />
-            <input
-              type="hidden"
-              name="fecha"
-              value={
-                "'" +
-                new Date().toLocaleDateString("es-VE") +
-                " " +
-                new Date().toLocaleTimeString("es-VE", { timeStyle: "short" })
-              }
-            />
-            <input
-              type="hidden"
-              name="fechaFormateada"
-              value={
-                new Date().toLocaleDateString("es-VE") +
-                " " +
-                new Date().toLocaleTimeString("es-VE", { timeStyle: "short" })
-              }
             />
             <input
               id="enviar"
