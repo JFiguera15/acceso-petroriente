@@ -15,6 +15,7 @@ h1 {
   width: 100%;
   max-width: 500px;
   margin: auto;
+  justify-content: center;
 }
 
 img {
