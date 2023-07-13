@@ -4,9 +4,8 @@ import jwt_decode from "jwt-decode";
 import swal from "sweetalert";
 import toast, { Toaster } from "react-hot-toast";
 
-/*global google*/
-
 export default function App() {
+  /*global google*/
   const [nombre, setNombre] = useState("");
   const [user, setUser] = useState({});
   const [empresa, setEmpresa] = useState("default");
@@ -28,6 +27,7 @@ export default function App() {
   ];
 
   function onSucces(msj) {
+    setContinuar(false);
     toast.dismiss(msj);
     swal("Agregado con éxito.");
     setDisabled(false);
