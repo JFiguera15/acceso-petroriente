@@ -119,6 +119,7 @@ export default function App() {
         src="https://drive.google.com/uc?export=download&id=1F3z83Q7NdqnNTlI66LThAkM0ZUPTMmcD"
         alt="Acceso oficina petroriente"
       />
+      <br />
       <div id="signInDiv" className="signInDiv"></div>
       {dominios.includes(empresa) && continuar && (
         <div>
