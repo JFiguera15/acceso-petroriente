@@ -1,0 +1,102 @@
+html {
+  background-color: #7abee7;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+h1 {
+  color: white;
+  max-width: 500px;
+  margin: auto;
+  background-color: #013466;
+  padding: 20px;
+}
+
+.signInDiv {
+  width: 50%;
+  max-width: 500px;
+}
+
+img {
+  width: 100%;
+  max-width: 500px;
+}
+
+button {
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 5px;
+  max-width: 500px;
+  margin: auto;
+}
+
+button:disabled,
+button[disabled] {
+  color: #666666;
+}
+
+th {
+  color: white;
+  background-color: #013466;
+}
+
+td {
+  font-weight: bold;
+  background-color: white;
+}
+
+table {
+  width: 100%;
+  background-color: black;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+.swal-text {
+  size: 100px;
+  color: black;
+  font-weight: bold;
+}
+
+.App {
+  text-align: center;
+  background-color: #7abee7;
+}
+
+.extras {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.form input {
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.form select {
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.form option {
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 5px;
+}
