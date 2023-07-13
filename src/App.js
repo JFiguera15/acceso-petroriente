@@ -4,7 +4,7 @@ import jwt_decode from "jwt-decode";
 import swal from "sweetalert";
 import toast, { Toaster } from "react-hot-toast";
 
-/*global google*/
+
 
 export default function App() {
   const [nombre, setNombre] = useState("");
@@ -96,6 +96,7 @@ export default function App() {
   }
 
   useEffect(() => {
+    /*global google*/
     google.accounts.id.initialize({
       client_id:
         "980167007724-257455vafejni63nl1ocp3fms2bia1pc.apps.googleusercontent.com",
