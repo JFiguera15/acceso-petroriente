@@ -46,7 +46,7 @@ export default function App() {
     } else {
       setEmpresa("gmail");
     }
-    document.getElementById("signInDiv").hidden = true;
+    document.getElementById("signInDiv").style.display = "none";
   }
 
   function Submit(e) {
