@@ -37,7 +37,6 @@ export default function App() {
   function handleCallbackResponse(response) {
     setRespuesta(response);
     let userObject = jwt_decode(response.credential);
-    console.log(userObject);
     setUser(userObject);
     setNombre(userObject.name);
     if (userObject.hd) {
