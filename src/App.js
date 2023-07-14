@@ -133,8 +133,7 @@ export default function App() {
               value={nombre}
               onChange={e => setNombre(e.target.value)}
             />
-            <select required name="tipo" defaultValue="Elegir opción...">
-              <option hidden selected disabled>Elegir opción...</option>
+            <select required name="tipo" defaultValue="¿Entrada o salida?">
               <option value="Entrada">Entrada</option>
               <option value="Salida">Salida</option>
             </select>
