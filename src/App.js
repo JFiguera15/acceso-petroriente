@@ -11,7 +11,7 @@ export default function App() {
   const [disabled, setDisabled] = useState(false);
   const [continuar, setContinuar] = useState(true);
   const [respuesta, setRespuesta] = useState({});
-  
+
   const dominios = [
     "SINOENERGYCORP",
     "INTEGRA-WS",
@@ -52,9 +52,11 @@ export default function App() {
     e.preventDefault();
     const msj = toast.loading("Enviando...");
     setDisabled(true);
+    const formEle = document.querySelector("form");
+    const formDatab = new FormData(formEle);
     let userObject = jwt_decode(respuesta.credential);
     const usuario = {
-      nombre: userObject.name,
+      nombre: formDatab.get("nombre"),
       empresa: userObject.hd
         .replace(".pro", "")
         .replace(".com", "")
@@ -69,7 +71,8 @@ export default function App() {
       fechaFormat:
         new Date().toLocaleDateString("es-VE") +
         " " +
-        new Date().toLocaleTimeString("es-VE", { timeStyle: "short" })
+        new Date().toLocaleTimeString("es-VE", { timeStyle: "short" }),
+      tipo: formDatab.get("tipo")
     };
     const getFormData = (usuario) =>
       Object.keys(usuario).reduce((formData, key) => {
@@ -77,7 +80,7 @@ export default function App() {
         return formData;
       }, new FormData());
     fetch(
-      "https://script.google.com/macros/s/AKfycbyfugIKG48CTz9F6StKxc8dU-m7PL9OAasZBC8ZUCripgI5DvRrtRrwitN_mjsRPJDfNA/exec",
+      "https://script.google.com/macros/s/AKfycbzPpcRX3T6YWo-J6ZSj9_1R3QzWfWTBG7pC9xreQ8NbVlMAeqWQIcutqIKx9yh-XHOXdw/exec",
       {
         method: "POST",
         "Content-Type": "multipart/form-data",
@@ -99,7 +102,6 @@ export default function App() {
     google.accounts.id.initialize({
       client_id:
         "980167007724-257455vafejni63nl1ocp3fms2bia1pc.apps.googleusercontent.com",
-      api_key: "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",
       callback: handleCallbackResponse
     });
 
@@ -130,6 +132,11 @@ export default function App() {
               required
               value={nombre}
             />
+            <select required name="tipo" defaultValue="Elegir opción...">
+              <option hidden selected disabled>Elegir opción...</option>
+              <option value="Entrada">Entrada</option>
+              <option value="Salida">Salida</option>
+            </select>
             <input
               id="enviar"
               value="Enviar"
