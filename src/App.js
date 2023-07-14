@@ -131,6 +131,7 @@ export default function App() {
               type="text"
               required
               value={nombre}
+              onChange={e => setNombre(e.target.value)}
             />
             <select required name="tipo" defaultValue="Elegir opción...">
               <option hidden selected disabled>Elegir opción...</option>
