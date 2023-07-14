@@ -101,7 +101,7 @@ export default function App() {
     /*global google*/
     google.accounts.id.initialize({
       client_id:
-        "980167007724-257455vafejni63nl1ocp3fms2bia1pc.apps.googleusercontent.com",
+        "34248424590-67kpni48sj73d94n69249m5ifh7cj1r7.apps.googleusercontent.com",
       callback: handleCallbackResponse
     });
 
