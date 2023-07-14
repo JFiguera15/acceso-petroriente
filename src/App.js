@@ -133,7 +133,7 @@ export default function App() {
               value={nombre}
               onChange={e => setNombre(e.target.value)}
             />
-            <select required name="tipo" defaultValue="¿Entrada o salida?">
+            <select required name="tipo">
               <option value="Entrada">Entrada</option>
               <option value="Salida">Salida</option>
             </select>
