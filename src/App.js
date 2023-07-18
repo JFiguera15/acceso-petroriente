@@ -118,7 +118,7 @@ export default function App() {
     <div className="App">
       <Toaster />
       <img
-        src="https://drive.google.com/uc?export=download&id=1F3z83Q7NdqnNTlI66LThAkM0ZUPTMmcD"
+        src="https://drive.google.com/uc?export=view&id=1cSYGwSwZ35eh9nxmMYq3YpdmlNlPeJbv"
         alt="Acceso oficina petroriente"
       />
       <br />
