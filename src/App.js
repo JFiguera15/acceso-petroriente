@@ -72,7 +72,8 @@ export default function App() {
         new Date().toLocaleDateString("es-VE") +
         " " +
         new Date().toLocaleTimeString("es-VE", { timeStyle: "short" }),
-      tipo: formDatab.get("tipo")
+      tipo: formDatab.get("tipo"),
+      oficina: "IWS Petroriente"
     };
     const getFormData = (usuario) =>
       Object.keys(usuario).reduce((formData, key) => {
@@ -80,7 +81,7 @@ export default function App() {
         return formData;
       }, new FormData());
     fetch(
-      "https://script.google.com/macros/s/AKfycbzPpcRX3T6YWo-J6ZSj9_1R3QzWfWTBG7pC9xreQ8NbVlMAeqWQIcutqIKx9yh-XHOXdw/exec",
+      "https://script.google.com/macros/s/AKfycbwSKYoWpaGptlTTIIm4uIuVc5sKdes5u1-1jceuW-eWERFfDICRjBpaXP31nDztLbQFsA/exec",
       {
         method: "POST",
         "Content-Type": "multipart/form-data",
