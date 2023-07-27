@@ -81,7 +81,7 @@ export default function App() {
         return formData;
       }, new FormData());
     fetch(
-      "https://script.google.com/macros/s/AKfycbwSKYoWpaGptlTTIIm4uIuVc5sKdes5u1-1jceuW-eWERFfDICRjBpaXP31nDztLbQFsA/exec",
+      "https://script.google.com/macros/s/AKfycbw1Pbz541U6KuoD1QnMB7noC3KN61luyHtST31ELcammqZc2X1fRJ7TOBcf_nPx8tIZDg/exec",
       {
         method: "POST",
         "Content-Type": "multipart/form-data",
