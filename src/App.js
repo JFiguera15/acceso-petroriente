@@ -71,7 +71,7 @@ export default function App() {
       fechaFormat:
         new Date().toLocaleDateString("es-VE") +
         " " +
-        new Date().toLocaleTimeString("es-VE", { timeStyle: "short" }),
+        new Date().toLocaleTimeString("es-VE", {  hour12: false  }),
       tipo: formDatab.get("tipo"),
       oficina: "IWS Petroriente"
     };
