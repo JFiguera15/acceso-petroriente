@@ -4,7 +4,7 @@ import jwt_decode from "jwt-decode";
 import swal from "sweetalert";
 import toast, { Toaster } from "react-hot-toast";
 import {BrowserRouter, Routes, Route } from 'react-router-dom';
-import zonaindustrial from './pages/zonaindustrial'
+import zonaindustrial from "./pages/zonaindustrial";
 
 export default function App() {
   const [nombre, setNombre] = useState("");
@@ -121,7 +121,7 @@ export default function App() {
       <div>
         <BrowserRouter>
           <Routes>
-            <Route path="/zonaindustrial" element={< zonaindustrial />} />
+            <Route path="/zonaindustrial" element={<zonaindustrial />} />
           </Routes>
         </BrowserRouter>
       </div>
