@@ -4,7 +4,7 @@ import jwt_decode from "jwt-decode";
 import swal from "sweetalert";
 import toast, { Toaster } from "react-hot-toast";
 
-export default function App() {
+export default function zonaindustrial() {
   const [nombre, setNombre] = useState("");
   const [user, setUser] = useState({});
   const [empresa, setEmpresa] = useState("default");
