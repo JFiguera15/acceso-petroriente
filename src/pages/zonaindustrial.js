@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import jwt_decode from "jwt-decode";
 import swal from "sweetalert";
 import toast, { Toaster } from "react-hot-toast";
-import {BrowserRouter, Routes, Route } from 'react-router-dom';
 
 export default function App() {
   const [nombre, setNombre] = useState("");
@@ -117,14 +116,8 @@ export default function App() {
 
   return (
     <div className="App">
-      <div>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/zonaindustrial" element={<zonaindustrial />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
       <Toaster />
+      <h1>Prueba</h1>
       <img
         src="https://drive.google.com/uc?export=view&id=1cSYGwSwZ35eh9nxmMYq3YpdmlNlPeJbv"
         alt="Acceso oficina petroriente"
