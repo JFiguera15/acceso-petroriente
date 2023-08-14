@@ -115,7 +115,7 @@ export default function zonaindustrial() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="Zona">
       <Toaster />
       <h1>Prueba Please</h1>
       <br />

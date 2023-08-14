@@ -121,7 +121,7 @@ export default function App() {
       <div>
         <BrowserRouter>
           <Routes>
-            <Route index element={<zonaindustrial />} />
+            <Route path="/zonaindustrial" element={<zonaindustrial />} />
           </Routes>
         </BrowserRouter>
       </div>
