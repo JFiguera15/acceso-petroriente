@@ -71,7 +71,7 @@ export default function App() {
       fechaFormat:
         new Date().toLocaleDateString("es-VE") +
         " " +
-        new Date().toLocaleTimeString("es-VE", { timeStyle: "short" }),
+        new Date().toLocaleTimeString("es-VE", {  hour12: false  }),
       tipo: formDatab.get("tipo"),
       oficina: "IWS Petroriente"
     };
@@ -81,7 +81,7 @@ export default function App() {
         return formData;
       }, new FormData());
     fetch(
-      "https://script.google.com/macros/s/AKfycbwSKYoWpaGptlTTIIm4uIuVc5sKdes5u1-1jceuW-eWERFfDICRjBpaXP31nDztLbQFsA/exec",
+      "https://script.google.com/macros/s/AKfycbw1Pbz541U6KuoD1QnMB7noC3KN61luyHtST31ELcammqZc2X1fRJ7TOBcf_nPx8tIZDg/exec",
       {
         method: "POST",
         "Content-Type": "multipart/form-data",
@@ -118,7 +118,7 @@ export default function App() {
     <div className="App">
       <Toaster />
       <img
-        src="https://drive.google.com/uc?export=download&id=1F3z83Q7NdqnNTlI66LThAkM0ZUPTMmcD"
+        src="https://drive.google.com/uc?export=view&id=1cSYGwSwZ35eh9nxmMYq3YpdmlNlPeJbv"
         alt="Acceso oficina petroriente"
       />
       <br />
