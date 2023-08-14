@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+      {
+        "source": "/zonaindustrial",
+        "destination": "https://www.google.com"
+      }
+    ]
+  }
