@@ -118,6 +118,10 @@ export default function App() {
     <div className="App">
       <Toaster />
       <h1>Prueba Please</h1>
+      <img
+        src="https://drive.google.com/uc?export=view&id=1cSYGwSwZ35eh9nxmMYq3YpdmlNlPeJbv"
+        alt="Acceso oficina petroriente"
+      />
       <br />
       <div id="signInDiv" className="signInDiv"></div>
       {dominios.includes(empresa) && continuar && (
