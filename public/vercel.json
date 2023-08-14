@@ -1,5 +1,0 @@
-{
-    "rewrites":  [
-      {"source": "/zonaindustrial", "destination": "/zonaindustrial.js"}
-    ]
-  }
