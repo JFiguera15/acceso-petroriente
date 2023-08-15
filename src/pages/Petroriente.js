@@ -4,7 +4,7 @@ import jwt_decode from "jwt-decode";
 import swal from "sweetalert";
 import toast, { Toaster } from "react-hot-toast";
 
-export default function ZonaIndustrial() {
+export default function Petroriente() {
   const [nombre, setNombre] = useState("");
   const [user, setUser] = useState({});
   const [empresa, setEmpresa] = useState("default");
@@ -73,7 +73,7 @@ export default function ZonaIndustrial() {
         " " +
         new Date().toLocaleTimeString("es-VE", {  hour12: false  }),
       tipo: formDatab.get("tipo"),
-      oficina: "IWS Zona Industrial"
+      oficina: "IWS Petroriente"
     };
     const getFormData = (usuario) =>
       Object.keys(usuario).reduce((formData, key) => {
@@ -81,7 +81,7 @@ export default function ZonaIndustrial() {
         return formData;
       }, new FormData());
     fetch(
-      "https://script.google.com/macros/s/AKfycbzOm80ZSN2pejIiDpnJKqv5hl9UAcyWbnZ9EnwUdGInUA1IugqSX2aTdL-aOjNmjFG9/exec",
+      "https://script.google.com/macros/s/AKfycbw1Pbz541U6KuoD1QnMB7noC3KN61luyHtST31ELcammqZc2X1fRJ7TOBcf_nPx8tIZDg/exec",
       {
         method: "POST",
         "Content-Type": "multipart/form-data",
@@ -115,11 +115,11 @@ export default function ZonaIndustrial() {
   }, []);
 
   return (
-    <div className="Zona">
+    <div className="App">
       <Toaster />
       <img
-        src="https://drive.google.com/uc?export=view&id=1QN8msgP7kFJ8nf_TgAYsEQ235lPrsrbE"
-        alt="Acceso base Zona Industrial"
+        src="https://drive.google.com/uc?export=view&id=1cSYGwSwZ35eh9nxmMYq3YpdmlNlPeJbv"
+        alt="Acceso oficina petroriente"
       />
       <br />
       <div id="signInDiv" className="signInDiv"></div>
