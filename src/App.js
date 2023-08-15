@@ -1,6 +1,6 @@
 import "./styles.css";
 import {BrowserRouter, Routes, Route } from 'react-router-dom';
-import ZonaIndustrial from '.pages/ZonaIndustrial';
+import ZonaIndustrial from './pages/ZonaIndustrial';
 import Petroriente from "./pages/Petroriente";
 
 
