@@ -7,7 +7,7 @@ import toast, { Toaster } from "react-hot-toast";
 export default function ZonaIndustrial() {
   const [nombre, setNombre] = useState("");
   const [user, setUser] = useState({});
-  const [placa, setPlaca] = useState({});
+  const [placa, setPlaca] = useState("");
   const [empresa, setEmpresa] = useState("default");
   const [disabled, setDisabled] = useState(false);
   const [continuar, setContinuar] = useState(true);
@@ -58,7 +58,7 @@ export default function ZonaIndustrial() {
     let userObject = jwt_decode(respuesta.credential);
     const usuario = {
       nombre: formDatab.get("nombre"),
-      placa :formDatab.get("placa"),
+      placa: formDatab.get("placa").toUpperCase(),
       empresa: userObject.hd
         .replace(".pro", "")
         .replace(".com", "")
