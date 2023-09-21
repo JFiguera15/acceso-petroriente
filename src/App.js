@@ -5,6 +5,7 @@ import ZonaIndustrial from "./pages/zonaindustrial";
 
 
 export default function App() {
+  //Se establece el router para que puedan tenerse redirecciones.
   return (
     <div className="App">
       <div>

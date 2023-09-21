@@ -5,6 +5,7 @@ import swal from "sweetalert";
 import toast, { Toaster } from "react-hot-toast";
 
 export default function ZonaIndustrial() {
+  //Definicion variables de estado
   const [nombre, setNombre] = useState("");
   const [user, setUser] = useState({});
   const [placa, setPlaca] = useState("");
@@ -13,6 +14,7 @@ export default function ZonaIndustrial() {
   const [continuar, setContinuar] = useState(true);
   const [respuesta, setRespuesta] = useState({});
 
+  //Dominios de los correos
   const dominios = [
     "SINOENERGYCORP",
     "INTEGRA-WS",
@@ -27,6 +29,7 @@ export default function ZonaIndustrial() {
     "PROILIFT"
   ];
 
+  //Funcion para mandar alerta al momento de realizarse correctamente.
   function onSucces(msj) {
     setContinuar(false);
     toast.dismiss(msj);
@@ -34,11 +37,13 @@ export default function ZonaIndustrial() {
     setDisabled(false);
   }
 
+  //Funcion llamada al momento de logearse
   function handleCallbackResponse(response) {
     setRespuesta(response);
     let userObject = jwt_decode(response.credential);
     setUser(userObject);
     setNombre(userObject.name);
+    //Para asegurarse que el correo es corporativo
     if (userObject.hd) {
       setEmpresa(
         userObject.hd.replace(".com", "").replace(".pro", "").toUpperCase()
@@ -49,6 +54,7 @@ export default function ZonaIndustrial() {
     document.getElementById("signInDiv").style.display = "none";
   }
 
+  //Función llamada al momento de enviar la Form
   function Submit(e) {
     e.preventDefault();
     const msj = toast.loading("Enviando...");
@@ -100,6 +106,7 @@ export default function ZonaIndustrial() {
       });
   }
 
+  //Establece la key de la API de google y crea el boton de login
   useEffect(() => {
     /*global google*/
     google.accounts.id.initialize({
@@ -116,6 +123,7 @@ export default function ZonaIndustrial() {
     google.accounts.id.prompt();
   }, []);
 
+  //HTML de la pagina
   return (
     <div className="Zona">
       <Toaster />
