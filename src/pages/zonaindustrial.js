@@ -148,7 +148,6 @@ export default function ZonaIndustrial() {
               placeholder="Placa de vehiculo"
               name="placa"
               type="text"
-              required
               value={placa}
               onChange={e => setPlaca(e.target.value)}
             />
